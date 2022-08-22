@@ -21,7 +21,7 @@ Contractor experience: <br>
 - When contractor signs in or up. And, when they click 'create job' in nav later. (/create_job)<br>
 ![create job](./images_for_plan/create_job.png)
 - When contractor clicks 'my jobs' (/my_jobs) <br>
-![my jobs](./images_for_plan/%20my_jobs.png)
+![my jobs](./images_for_plan/my_jobs.png)
 - When contractor clicks on a job in 'my jobs' (/my_jobs/job/:id) <br>
 ![individual job](./images_for_plan/contractor_job.png)
 - When contractor clicks on profile icon <br>
