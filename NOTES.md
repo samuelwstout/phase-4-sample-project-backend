@@ -28,9 +28,28 @@ Contractor experience: <br>
 ![profile page contractor](./images_for_plan/contractor_profile.png)
 
 Musician experience: <br>
+
 - When musician signs in or up, and when they click 'find work' <br>
 ![find work](./images_for_plan/find_work.png)
+- When musician clicks 'apply' on a job posting <br>
+![job app](./images_for_plan/job_app.png)
+- When musician clicks on 'my applications (or my jobs)' <br>
+![my apps](./images_for_plan/my_apps.png) <br>
+Include all job info in those boxes. <br>
+- When musician clicks on profile icon <br>
+![musician profile](./images_for_plan/musician_profile.png)
 
+
+
+Models: 
+Musician has many Contractors through Jobs
+Musician has many Jobs
+
+Jobs belongs to Musician
+Jobs belongs to Contractor
+
+Contractor has many Musicians through Jobs
+Contractor has many Jobs
 
 
 
