@@ -2,33 +2,24 @@ Job board for freelance musicians
 Upwork inspired
 
 App walkthrough/routes: <br>
-- Landing page (/)
-    - ![landing page](./images/landingpage.png)
-- Sign up (/signup) 
-    - ![signup page](./images/signup.png)
-- If they click 'join as contractor' 
-    - ![join as contractor](./images/join_as_contractor.png)
-- If they click 'join as musician'
-    - ![join as musician](./images/join_as_musician.png) 
-- If they 'sign in' from / 
-    - ![sign in](./images/signin.png) 
-
-
-Relationships:
-
-Musician will have many jobs
-Musician will have many contractors through jobs
-
-Jobs belong to Musician
-Jobs belong to Contractor
-
-Contractor will have many Jobs
-Contractor will have many Musicians through Jobs
-
-Models/attributes: 
-Musician: name, password_digest, id, email, media, image_url, bio, instrument
-Contractor: name, password_digest, id, email, image_url, bio
-Job: musician_id, contractor_id, name, location, description, date
+- Landing page (/) <br>
+![landing page](./images_for_plan/landingpage.png)
+- Sign up (/signup) <br>
+![signup page](./images_for_plan/signup.png)
+- If they click 'join as contractor' <br>
+![join as contractor](./images_for_plan/join_as_contractor.png)
+- If they click 'join as musician' <br>
+![join as musician](./images_for_plan/join_as_musician.png) 
+- If they 'sign in' from / <br>
+![sign in](./images_for_plan/signin.png) 
+- When contractor signs in or up. And, when they click 'create job' in nav later. (/create_job)<br>
+![create job](./images_for_plan/create_job.png)
+- When contractor clicks 'my jobs' (/my_jobs) <br>
+![my jobs](./images_for_plan/%20my_jobs.png)
+- When contractor clicks on a job in 'my jobs' (/my_jobs/job/:id) <br>
+![individual job](./images_for_plan/contractor_job.png)
+- When contractor clicks on profile icon <br>
+![profile page contractor](./images_for_plan/contractor_profile.png)
 
 
 
