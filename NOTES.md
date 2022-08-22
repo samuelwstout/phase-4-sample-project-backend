@@ -28,6 +28,9 @@ Contractor experience: <br>
 ![profile page contractor](./images_for_plan/contractor_profile.png)
 
 Musician experience: <br>
+- When musician signs in or up, and when they click 'find work' <br>
+![find work](./images_for_plan/find_work.png)
+
 
 
 
