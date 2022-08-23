@@ -39,8 +39,6 @@ Include all job info in those boxes. <br>
 - When musician clicks on profile icon (/:musician_first_and_last_name/profile) <br>
 ![musician profile](./images_for_plan/musician_profile.png)
 
-
-
 Models: <br>
 
 Musician: <br>
