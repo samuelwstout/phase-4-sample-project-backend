@@ -42,26 +42,14 @@ Include all job info in those boxes. <br>
 
 
 Models: <br>
-- Musician has many Contractors through Jobs
+
+Musician: <br>
+
 - Musician has many Jobs
+- Musician has many Contractors through Jobs
 - Musician has many Applications
 - Musician has many Jobs through Applications <br>
 
-- Jobs belongs to Musician
-- Jobs belongs to Contractor
-- Job has many Applications
-- Job has many Musicians through Applications <br>
-
-- Application belongs to Musician
-- Application belongs to Job <br>
-
-- Contractor has many Musicians through Jobs
-- Contractor has many Jobs
-
-
-Attributes:
-
-Musician: <br>
 - first_name: string
 - last_name: string
 - email: string
@@ -73,26 +61,52 @@ Musician: <br>
 - media_url2: string <br>
 
 Contractor: <br>
+
+- Contractor has many Musicians through Jobs
+- Contractor has many Jobs
+
 - first_name: string
 - last_name: string
 - email: string
 - password_digest <br>
 
 Job: <br>
+
+- Jobs belongs to Musician
+- Jobs belongs to Contractor
+- Job has many Applications
+- Job has many Musicians through Applications <br>
+
 - headline: string
 - description: text
-- date: string
+- date: Date
 - location: string
 - budget :integer
-- applications_from_musicians :integer
 - musician_id
 - contractor_id
 
 
 Application: <br>
+
+- Application belongs to Musician
+- Application belongs to Job <br>
+
 - resume_url: string
 - cover_letter_url: string
-- accepted :boolean
-- musician_id
+- status: string
+- musician_id 
 - job_id
+
+- sam = Musician.create(first_name: "Sam", last_name: "Stout", email: "samuelwstout@gmail.com", password: "asdfghjkl;", instrument: "trumpet", location: "Earlville, IL", bio: "I play trumpet.", media_url1: "url goes here", media_url2: "url goes here")
+
+- steve = Contractor.create(first_name: "Steve", last_name: "Trout", email: "stevetrout@gmail.com", password: "poiuytrewq")
+
+- steve.jobs.create(headline: "Play trumpet with orchestra", description: "blah", date: 8/24/2022, location: "Chicago", budget: 400, musician_id: nil(until steve accepts a musician), contractor_id: 1)
+
+- sam.applications.create(resume_url: "resume.pdf", cover_letter_url: "coverletter.pdf", job_id: 1, musician_id: 1, status: "pending")
+
+- Steve would look over Sam's application and change status to "accept" or "deny".
+- If "accept", Job.first.update(musician_id: 1). Application.first.update(status: "accept"). 
+- If "deny", Application.first.update(status: "deny")
+
 
