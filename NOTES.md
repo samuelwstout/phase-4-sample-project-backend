@@ -62,26 +62,27 @@ Models: <br>
 Attributes:
 
 Musician: <br>
-- first_name
-- last_name
-- email
-- password
-- instrument
-- location
-- bio
-- media <br>
+- first_name: string
+- last_name: string
+- email: string
+- password_digest
+- instrument: string
+- location: string
+- bio: text
+- media_url1: string
+- media_url2: string <br>
 
 Contractor: <br>
-- first_name
-- last_name
-- email
-- password <br>
+- first_name: string
+- last_name: string
+- email: string
+- password_digest <br>
 
 Job: <br>
-- headline
-- description
-- date
-- location
+- headline: string
+- description: text
+- date: string
+- location: string
 - budget :integer
 - applications_from_musicians :integer
 - musician_id
@@ -89,8 +90,8 @@ Job: <br>
 
 
 Application: <br>
-- resume
-- cover_letter
+- resume_url: string
+- cover_letter_url: string
 - accepted :boolean
 - musician_id
 - job_id
