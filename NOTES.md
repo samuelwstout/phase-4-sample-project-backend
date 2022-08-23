@@ -45,15 +45,15 @@ Models: <br>
 - Musician has many Contractors through Jobs
 - Musician has many Jobs
 - Musician has many Applications
-- Musician has many Jobs through Applications
+- Musician has many Jobs through Applications <br>
 
 - Jobs belongs to Musician
 - Jobs belongs to Contractor
 - Job has many Applications
-- Job has many Musicians through Applications
+- Job has many Musicians through Applications <br>
 
 - Application belongs to Musician
-- Application belongs to Job
+- Application belongs to Job <br>
 
 - Contractor has many Musicians through Jobs
 - Contractor has many Jobs
@@ -84,9 +84,14 @@ Job: <br>
 - location
 - budget :integer
 - applications_from_musicians :integer
+- musician_id
+- contractor_id
+
 
 Application: <br>
 - resume
 - cover_letter
 - accepted :boolean
+- musician_id
+- job_id
 
