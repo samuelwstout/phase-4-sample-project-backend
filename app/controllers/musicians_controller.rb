@@ -1,4 +1,5 @@
 class MusiciansController < ApplicationController
+  skip_before_action :authorized, only: [:create]
   before_action :set_musician, only: %i[ show update destroy ]
 
   # GET /musicians
