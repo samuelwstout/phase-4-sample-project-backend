@@ -48,4 +48,14 @@ class MusiciansController < ApplicationController
     def musician_params
       params.require(:musician).permit(:first_name, :last_name, :email, :password_digest, :instrument, :location, :bio, :media_url1, :media_url2)
     end
+=begin
+    params = {
+      required: {
+        permitted_attr_1: value_1,
+        permitted_attr_2: value_2,
+        permitted_attr_3: value_3
+      }
+    }
+=end
+
 end
