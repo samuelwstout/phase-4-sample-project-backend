@@ -18,7 +18,8 @@ class MusiciansController < ApplicationController
     @musician = Musician.new(musician_params)
 
     if @musician.save
-      render json: @musician, status: :created, location: @musician
+      @token = encode_token({ musician_id: @musician.id })
+      render json: { musician: @musician, token: @token }, status: :created, location: @musician
     else
       render json: @musician.errors, status: :unprocessable_entity
     end
@@ -46,7 +47,7 @@ class MusiciansController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def musician_params
-      params.require(:musician).permit(:first_name, :last_name, :email, :password_digest, :instrument, :location, :bio, :media_url1, :media_url2)
+      params.require(:musician).permit(:first_name, :last_name, :email, :password, :instrument, :location, :bio, :media_url1, :media_url2)
     end
 =begin
     params = {
