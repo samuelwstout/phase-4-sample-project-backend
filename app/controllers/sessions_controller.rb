@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
     end
 
     def login
-        @musician = Musician.find_by(first_name: params[:first_name], last_name: params[:last_name], email: params[:email], instrument: params[:instrument], location: params[:location], bio: params[:bio], media_url1: params[:media_url1], media_url2: params[:media_url2])
+        @musician = Musician.find_by(email: params[:email])
         if @musician && @musician.authenticate(params[:password])
             @token = encode_token({ musician_id: @musician.id })
             render json: { musician: @musician, token: @token }, status: :ok
